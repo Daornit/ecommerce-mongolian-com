@@ -7,8 +7,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
-
+import { CardModule } from 'primeng/card';
 import { AppComponent } from './app.component';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,9 @@ import { AppComponent } from './app.component';
         HttpClientModule,
         InputTextModule,
         DialogModule,
-        ButtonModule
+        ButtonModule,
+        CardModule,
+        PanelModule
     ],
     providers: [],
     bootstrap: [AppComponent]

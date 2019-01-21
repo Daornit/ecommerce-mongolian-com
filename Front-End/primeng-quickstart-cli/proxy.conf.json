@@ -1,0 +1,9 @@
+{
+  "/api/news/*":{
+    "target":"http://localhost:8080/api/news",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/news": ""
+    }
+  }
+}

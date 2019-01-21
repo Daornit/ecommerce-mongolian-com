@@ -45,8 +45,10 @@ public class PostNewsController {
     }
     @PostMapping()
     public ResponseEntity<Object> createStudent(@RequestBody PostNew postNew) {
+        log.info(postNew.toString());
         PostNew savedPostNew = postNewDAO.save(postNew);
         log.info(savedPostNew.toString());
+
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(savedPostNew.getId()).toUri();
         return ResponseEntity.ok(location);
